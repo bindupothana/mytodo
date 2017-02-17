@@ -22,10 +22,11 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss)$/,
         loaders: [
           'style-loader',
           'css-loader',
+          'sass-loader',
           'postcss-loader'
         ]
       },
@@ -33,7 +34,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
-          'ng-annotate-loader'
+          'ng-annotate-loader',
+          'babel-loader'
         ]
       },
       {

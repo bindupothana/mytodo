@@ -1,0 +1,52 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" ng-submit="vm.register()" role="form">
+        <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
+            <label for="username">First name</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+            <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+        </div>
+    
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+        </div>
+
+
+
+
+
+
+                        <div class="form-group">
+                            <label id="label" class="control-label">Password:</label>
+                            <input type="password" class="form-control" ng-model="user.password" name="userpassword" placeholder="Enter Password" autocomplete="off" ng-minlength="8" ng-maxlength="12"  required>
+
+                            <div ng-messages = "employeeForm.userpassword.$error">
+                                <div ng-message = "name">invalid password</div><br/>
+                                <div ng-message = "pattern">invalid password</div>
+                            </div>
+
+                            <div class="form-group">
+                            <label id="label" class="control-label">Confirm Password:</label>
+                            <input type="password" class="form-control" ng-model="user.confirmpassword" name="confirmpassword" placeholder="Enter Password" autocomplete="off" ng-minlength="8" ng-maxlength="12"  compare-to="user.password" required>
+
+                            <div ng-messages = "employeeForm.confirmpassword.$error">
+                                <div ng-message = "name">invalid password</div><br/>
+                                <div ng-message = "compareTo">invalid Confirm password</div>
+                            </div>
+
+
+
+
+
+
+
+
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+            
+            <a href="#!/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>

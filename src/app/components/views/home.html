@@ -1,0 +1,13 @@
+<body ng-app="loginApp">
+<div ng-controller="loginctrl">
+<h2 class="text-center">List of Task</h2>
+<button ng-click="open()" class="btn btn-warning">New task</button>
+<button ng-click="open()" class="btn btn-warning"> List of Tasks</button>
+
+	<td><a ui-sref="views_login_list({id: $index})"></td>
+	<td><a ui-sref=""></a></td>
+
+
+<div class="panel panel-default" ui-view></div>
+</div>
+</body>

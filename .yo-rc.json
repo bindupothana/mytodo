@@ -4,9 +4,9 @@
     "props": {
       "framework": "angular1",
       "modules": "webpack",
-      "js": "js",
+      "js": "babel",
       "ci": [],
-      "css": "css",
+      "css": "scss",
       "resolved": "/usr/local/lib/node_modules/generator-fountain-webapp/node_modules/generator-fountain-angular1/generators/app/index.js",
       "namespace": "fountain-angular1",
       "argv": {
@@ -14,7 +14,7 @@
         "cooked": [],
         "original": []
       },
-      "sample": "todoMVC",
+      "sample": "techs",
       "router": "uirouter"
     }
   }
